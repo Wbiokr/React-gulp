@@ -1,0 +1,75 @@
+$c-blue=#3cb7c8
+@import './mixin.styl'
+body
+  background $c-bg
+#app
+  article
+    // padding 20px
+    header.cnt_title
+      Header()
+    section.cnt_footer
+      padding 20px 0
+      display none
+      &.current
+        display block
+      .total_msg
+        padding-left 40px
+        line-height 54px
+        background #f0f0f0
+        // color #008000
+        font-size 16px
+        span
+          font-weight 600
+          margin-right 50px
+          color #333333
+    ul.cnt_list
+      // margin-top 20px
+      margin 20px 20px 0
+      li
+        display flex
+        // padding 10px 0
+        &:first-child
+          span
+            background #68bac5
+            color #fff
+            border-color @background
+        >span
+          flex 1
+          display flex
+          justify-content center
+          align-items center
+          border 1px solid #ccc
+          min-height 30px
+          text-align center
+          
+    section.cnt_date
+      Input()
+      p
+        margin-right 60px
+        margin-left 10px
+        &:last-child
+          margin 0
+        >*
+          height 30px
+          line-height 30px
+          font-size 16px
+          margin-right 10px
+        input
+          padding-left 18px
+          border 1px solid #ccc
+        select
+          cursor pointer
+        input[type='button']
+          // background #999
+          color #666
+          border 1px solid @color
+          font-size 14px
+          line-height 28px
+          border-radius 4px
+          padding  0 14px
+          cursor pointer
+          transition all ease .3s
+          margin-left 10px
+          &:hover
+            color $c-blue
+            border-color @color
